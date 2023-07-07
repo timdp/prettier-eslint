@@ -127,7 +127,7 @@ async function format(options) {
     const eslintFixed = await eslintFix(text, filePath);
     return prettify(eslintFixed);
   }
-  return eslintFix(prettify(text), filePath);
+  return eslintFix(await prettify(text), filePath);
 }
 
 function createPrettify(formatOptions, prettierPath) {
