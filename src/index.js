@@ -131,7 +131,7 @@ async function format(options) {
 }
 
 function createPrettify(formatOptions, prettierPath) {
-  return function prettify(text) {
+  return async function prettify(text) {
     logger.debug('calling prettier on text');
     logger.trace(
       stripIndent`
@@ -143,7 +143,7 @@ function createPrettify(formatOptions, prettierPath) {
     const prettier = requireModule(prettierPath, 'prettier');
     try {
       logger.trace('calling prettier.format with the text and prettierOptions');
-      const output = prettier.format(text, formatOptions);
+      const output = await prettier.format(text, formatOptions);
       logger.trace('prettier: output === input', output === text);
       logger.trace(
         stripIndent`
