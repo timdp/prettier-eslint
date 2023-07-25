@@ -1,6 +1,6 @@
 {
   "name": "@timdp/prettier-eslint",
-  "version": "0.0.0-development",
+  "version": "15.0.2-alpha.0",
   "description": "Formats your JavaScript using prettier followed by eslint --fix",
   "publishConfig": {
     "access": "public"
