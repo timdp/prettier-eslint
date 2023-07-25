@@ -1,7 +1,10 @@
 {
-  "name": "prettier-eslint",
+  "name": "@timdp/prettier-eslint",
   "version": "0.0.0-development",
   "description": "Formats your JavaScript using prettier followed by eslint --fix",
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "dist/index.js",
   "types": "types/index.d.ts",
   "scripts": {
